@@ -36,7 +36,7 @@ pip install -r requirements.txt
 
 Для запуска скрипта наберите в командной строке команду:
 ```
-python -m publish_comic_on_vk
+python publish_comic_on_vk
 ```
 
 ### Цель проекта
