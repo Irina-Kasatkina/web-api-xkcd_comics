@@ -137,7 +137,6 @@ def main():
     temp_dirpath = Path.cwd() / TEMP_SUBDIR
     temp_dirpath.mkdir(parents=True, exist_ok=True)
 
-    exception = None
     try:
         response = requests.get('https://xkcd.com/info.0.json')
         response.raise_for_status()
@@ -149,8 +148,6 @@ def main():
         )
         post_comic_on_vk(vk_access_token, vk_group_id,
                          comic_message, comic_image_filepath)
-    except:
-        raise
     finally:
         shutil.rmtree(temp_dirpath)
 
